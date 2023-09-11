@@ -43,6 +43,29 @@ fun main(args: Array<String>) {
   /* var d =Dog()
     d.run()
     d.eat()*/
+
+/*    var a =Book("다모의 코틀린",10000).apply {
+        name ="[초특가]"+name
+        discount()
+    }
+    a.run {
+        println("상품평:${name} ,가격:${price}원")
+    }
+    a.let {
+        println("상품평:${it.name} ,가격:${it.price}원")
+    }*/
+
+  /*  println(Counter.count)
+    Counter.countUp()
+    Counter.countUp()
+    println(Counter.count)
+
+
+    Counter.clear()
+
+    println(Counter.count)*/
+
+    //EventPrinter().start()
 }
 
 
@@ -106,4 +129,58 @@ class Dog:Runner,Eater{
         println("허겁지겁먹습니다.")
     }
 }*/
+/*class Book(var name:String,var price:Int)
+{
+    fun discount(){
+        price -=2000
+    }
 
+}*/
+/*object Counter{
+    var count =0
+    fun countUp(){
+        count++
+    }
+    fun clear(){
+
+        count =0}
+
+}*/
+/*
+interface  EventListner{
+    fun onEvent(count: Int)
+
+
+}
+
+class Counter(var listener:EventListner){
+    fun count(){
+        for(i in 1..100){
+            if (i %5 ==0) listener.onEvent(i)
+        }
+    }
+}
+*/
+/*
+class EventPrinter: EventListner{
+    override fun onEvent(count: Int) {
+        TODO("Not yet implemented")
+        print("${count}-")
+    }
+    fun start(){
+        val counter =Counter(this)
+        counter.count()
+    }
+}*//*
+
+class EventPrinter {
+    fun start(){
+        val counter = Counter(object :EventListner{
+            override fun onEvent(count: Int) {
+                TODO("Not yet implemented")
+                print("${count}-")
+            }
+        })
+        counter.count()
+    }
+}*/
