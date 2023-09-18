@@ -1,10 +1,25 @@
 fun main(args: Array<String>) {
     //println("Hello World!")
-
+   /* var number:Int =10
+    val language = "English"
+    print("number:$number")
+    println("language:$language")
+    number =20
+    print("number:$number")*/
+   /* val e = Employee()
+    e.assignName()
+    e.name = "John Smith"  // 변수 name 초기화됨
+    e.assignName()*/
     // Try adding program arguments via Run/Debug configuration.
     // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
     println("Program arguments: ${args.joinToString()}")
-
+ /*    var a = Drink() // Drink a = new Drink()
+     a.drink()
+    var b:Drink =Cola()
+    b.drink()
+    if (b is Cola){
+        b.washDishes()
+    }*/
     // var 일반적으로 통용되는 변수 언제든지 읽기 쓰기가 가능함 vs val 선언시에만 초기화 가능 중간에 값을 변경할수 없음
 
 /*   var intArr = arrayOf(1,2,3,4,5)
@@ -184,3 +199,41 @@ class EventPrinter {
         counter.count()
     }
 }*/
+/*
+class Employee() {
+    lateinit var name: String  // 지연 초기화
+
+    fun assignName() {
+        if(!::name.isInitialized) // 콜론 2개를 이용하여 클래스 멤버 참조
+            println("name is not initialized")
+        else
+            println("$name")
+    }
+    }
+*/
+
+/*
+open class Drink {
+    var name ="음료"
+    open fun  drink(){
+        println("${name}을 마십니다")
+    }
+
+
+}
+class Cola :Drink (){
+    var type ="콜라"
+    override fun drink() {
+        println("${name}중에 ${type}을마십니다")
+    }
+   fun washDishes(){
+       println("${type}로 설거지를 합니다")
+   }
+
+}
+*/
+open class A{
+    open fun shout(){
+        println()`
+    }
+}
